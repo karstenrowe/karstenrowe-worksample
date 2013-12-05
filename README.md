@@ -1,8 +1,8 @@
-# A one page worksample framework
+# A one page worksample
 
 www.karstenrowe.com/projects/worksample/
 
-A simple aim; create a basic, yet expansive web project template for showcasing design work.
+A simple aim; create a basic, platform to showcase my design work.
 
 * [Bootstrapped](http://getbootstrap.com/)
 * [LESS](http://lesscss.org/) integrated stylesheets – commented, variables, mixins, retina ready, minified.
