@@ -459,10 +459,20 @@ body {
 				display: block;
 				margin: 0 auto;
 			}
+			// a
 			.carousel-control {
 				font-size: 70px;
 				text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+				color: @brand-lt;
 				top: 200px;
+				opacity: 1;
+				&:hover {
+					color: @brand-dk;
+				}
+				&:active {
+					color: @brand-lt;
+					background: none;
+				}
 			}
 		}
 	}
