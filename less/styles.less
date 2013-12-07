@@ -99,7 +99,7 @@ body {
 	background-color: lighten(@warm-white, 7%);
   min-height: 740px; // forces scroll so fixed navigation is noticeable on shorter pages
 
-  padding-top: 100px;
+  padding-top: 80px;
 	.2x('http://karstenrowe.files.wordpress.com/2013/11/footer-bg.jpg', "no-repeat", 1000px, 200px); // asset hosted on WordPress
 	background-position: 50% 100%;
 }
@@ -449,6 +449,20 @@ body {
 				position: absolute;
 				right: 5px;
 				bottom: 5px;
+			}
+		}
+		&.carousel {
+			margin: 0;
+			img {
+				width: auto;
+				height: 460px;
+				display: block;
+				margin: 0 auto;
+			}
+			.carousel-control {
+				font-size: 70px;
+				text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+				top: 200px;
 			}
 		}
 	}
