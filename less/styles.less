@@ -528,6 +528,41 @@ body {
 		}
 	}
 }
+// modal
+.modal {
+	background: @grey-dk;
+	padding-top: 40px;
+	margin: 0;
+}
+.body.modal-open {
+	margin: 0;
+}
+.modal-header,
+.modal-body {
+	background: @off-white;
+	border-top: 1px solid #fff;
+	border-radius: 2px 2px 0 0;
+	width: 80%;
+	margin: 0 auto;
+	padding: 30px 40px 12px;
+}
+.modal-header {
+	border-top: none;
+	border-bottom: none;
+	h3 {
+		color: @grey;
+		margin: 8px 0;
+	}
+	.close {
+		font-size: 40px;
+		margin: -22px -22px 0 0;
+	}
+}
+.modal-body {
+	border-top: none;
+	border-radius: 0 0 2px 2px;
+	padding: 0 40px 30px;
+}
 /* ============================ */
 
 
