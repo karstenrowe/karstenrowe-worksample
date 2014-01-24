@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="karstenrowe bootstrap framework worksample">
+    <meta name="description" content="karstenrowe bootstrap framework logo wall">
     <meta name="author" content="karstenrowe">
     <link rel="shortcut icon" href="ico/favicon.png">
 
-    <title>Karsten Rowe: Brand & UI designer</title>
+    <title>Karsten Rowe: Brand consultant & logo designer</title>
 
     <!-- Google Fonts import -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
@@ -19,204 +19,114 @@
 
   <body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-			<div class="navbar-header cbp-af-header">
-				<div class="navbar-header-inner">
-					<nav class="menu left">
-	          <ul>
-	          	<li class="navbar-brand"><a href="http://karstenrowe.com/" title="Visit karstenrowe.com home page." target="_blank">Karsten Rowe</a></li>
-	          </ul>
-					</nav>
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<nav class="menu right navbar-collapse collapse">
-	          <ul>
-	          	<li><a href="http://karstenrowe.com/blog/" title="Visit karstenrowe.com blog." target="_blank">Blog</a></li>
-	          	<li><a href="http://dribbble.com/karstenrowe" title="Visit karstenrowe.com dribbble profile." target="_blank">Dribbble</a></li>
-	          	<li><a href="https://www.facebook.com/karstenroweuk" title="Visit karstenrowe.com Facebook profile." target="_blank">Facebook</a></li>
-	          	<li><a href="http://www.linkedin.com/in/karstenrowe" title="Visit karstenrowe.com LinkedIn profile." target="_blank">LinkedIn</a></li>
-	          	<li><a href="https://twitter.com/karstenrowe" title="Visit karstenrowe.com Twitter profile." target="_blank">Twitter</a></li>
-	          	<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                 <ul class="dropdown-menu">
-		              <li><a href="https://foursquare.com/v/karstenrowecom/4f412e217b0c5e99ca540222" title="Visit karstenrowe.com Foursquare page." target="_blank">Foursquare</a></li>
-		              <li><a href="https://plus.google.com/u/0/b/106845247033101156109/106845247033101156109/posts/p/pub" title="Visit karstenrowe.com Google+ page." target="_blank">Google+</a></li>
-		              <li><a href="http://www.last.fm/user/karstenrowe" title="Visit karstenrowe.com Twitter profile." target="_blank">Last.fm</a></li>
-		            </ul>
-          		</li>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<a href="http://karstenrowe.com/">← karstenrowe.com</a>
+			<a href="http://karstenrowe.com/blog/">Blog</a>
+			<a href="http://dribbble.com/karstenrowe">Dribbble</a>
+			<a href="https://www.facebook.com/karstenroweuk">Facebook</a>
+			<a href="https://plus.google.com/u/0/b/106845247033101156109/106845247033101156109">Google+</a>
+			<a href="https://twitter.com/karstenrowe">Twitter</a>
+		</nav>
 
-	          </ul>
-					</nav>
-				</div>
-			</div> <!--/.nav-header -->
+		<!-- button for push menu -->
+		<section class="buttonset navbar navbar-default navbar-fixed-top">
+			<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
+			<a id="showLeftPush" class="">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</a>
+		</section>
 
-      </div> <!--/.container -->
-    </div> <!--/.navbar -->
+		<!-- twitter follow button -->
+		<a href="https://twitter.com/karstenrowe" class="twitter-follow-button" data-show-count="false">Follow @karstenrowe</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     <div class="container">
 
-			<div id="myCarousel" class="row carousel slide">
-			  <ol class="carousel-indicators">
-			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			    <li data-target="#myCarousel" data-slide-to="1"></li>
-			    <li data-target="#myCarousel" data-slide-to="2"></li>
-			    <li data-target="#myCarousel" data-slide-to="3"></li>
-			    <li data-target="#myCarousel" data-slide-to="4"></li>
-			  </ol>
-			  <!-- Carousel items -->
-			  <div class="carousel-inner">
-			    <div class="active item">
-			    	<p>
-			    		<img class="img-body" title="Slide one." src="img/carousel/img-slide-njs.jpg" >
-			    	</p>
-					</div>
-			    <div class="item">
-			    	<p>
-			    		<img class="img-body" title="Slide two." src="img/carousel/img-slide-nutshell.jpg" >
-		    		</p>
-					</div>
-			    <div class="item">
-			    	<p>
-			    		<img class="img-body" title="Slide three" src="img/carousel/img-slide-karstenrowe.jpg" >
-		    		</p>
-					</div>
-			    <div class="item">
-			    	<p>
-			    		<img class="img-body" title="Slide four" src="img/carousel/img-slide-hb.jpg" >
-		    		</p>
-					</div>
-			    <div class="item">
-			    	<p>
-			    		<img class="img-body" title="Slide five" src="img/carousel/img-slide-framework.jpg" >
-		    		</p>
-					</div>
-			  </div>
-			  <!-- Carousel nav -->
-			  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			</div>
-
-      <div class="page-header">
-        <h1>I'm Karsten. A brand <span>&</span> UI designer.</h1>
-	      <p class="lead">I create experiences for the web and mobile devices.</p>
+			<div class="page-header">
+				<a href="#"><img class="img" title="karstenrowe.com logo mark." src="img/brand/logo-hero_2x.png"></a>
+        <h1>Brand consultant <span>&amp;</span> logo designer.</h1>
+	      <p class="lead">Creating & crafting brands since 2004.</p>
       </div>
 
-			<div class="row skills">
+			<div class="row">
 	      <div class="col-xs-12 col-sm-4">
-					<img class="img feature" title="Recent design work." src="img/feature/icon-skill-brand_2x.png" >
-		      <h3 class="design">Design</h3>
-		      <p>I believe in good ideas & clarity of message. Scribbling daily, refining in Photoshop, prototyping in the browser.</p>
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsten-symbol_2x.png" >
 	      </div>
 	      <div class="col-xs-12 col-sm-4">
-					<img class="img feature" title="Recent design work." src="img/feature/icon-skill-build_2x.png" >
-			    <h3 class="build">Build</h3>
-			    <p>I write semantic HTML5 & CSS3 in LESS. I enjoy GitHub & WordPress, my current text editor of choice is Coda 2.</p>
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-hb-wordmark_2x.png" >
 	      </div>
 	      <div class="col-xs-12 col-sm-4">
-					<img class="img feature" title="Recent design work." src="img/feature/icon-skill-deliver_2x.png" >
-		      <h3 class="deliver">Measure</h3>
-		      <p>I like to consult and talk business strategy and metrics. I’m also a passionate presenter and public speaker.</p>
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-njs-wordmark_2x.png" >
 	      </div>
       </div>
 
-      <div id="project-01" class="jumbotron">
-				<img class="img feature" title="Recent design work." src="img/feature/img-feature-karstenrowe.png" >
-				<div class="content-container">
-		      <h3><span>Project 01</span> Karsten Rowe Inc.</h3>
-		      <p>A personal branding and web project. Responsive design. Built on WordPress.</p>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/2013/11/14/project-07-karstenrowe-com/" target="_blank">View project</a>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/" target="_blank">Visit website</a>
-		      <ul class="project meta">
-		      	<li>Tags:</li>
-		      	<li>Logo design</li>
-		      	<li>Brand guidelines</li>
-		      	<li>Print design</li>
-		      	<li>Web design</li>
-		      	<li>Front-end development</li>
-		      	<li>Digital marketing</li>
-		      </ul>
-		    </div>
+			<div class="row">
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-njs-symbol_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-nutshell-wordmark_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-nutshell-symbol_2x.png" >
+	      </div>
       </div>
 
-      <div id="project-02" class="jumbotron">
-				<img class="img feature" title="Recent design work." src="img/feature/img-feature-nutshell.png" >
-				<div class="content-container">
-		      <h3><span>Project 02</span> Nutshell Inc.</h3>
-		      <p>The design & refinement of a user-oriented CRM application. Working with software engineers to plan & craft intuitive interfaces & features across web and mobile platforms.</p>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/2013/08/24/project-04-nutshell-inc/" target="_blank">View project</a>
-		      <a class="btn btn-primary" href="http://www.nutshell.com/" target="_blank">Visit website</a>
-		      <ul class="project meta">
-		      	<li>Tags:</li>
-		      	<li>Logo design</li>
-		      	<li>Brand guidelines</li>
-		      	<li>Brand collateral</li>
-		      	<li>Web design</li>
-		      	<li>UI design</li>
-		      	<li>Front-end development</li>
-		      </ul>
-		    </div>
+			<div class="row">
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karstenrowe-wordmark_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-kraft-wordmark_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsteninc-wordmark_2x.png" >
+	      </div>
       </div>
 
-      <div id="project-03" class="jumbotron">
-				<img class="img feature" title="Recent design work." src="img/feature/img-feature-njs.png" >
-				<div class="content-container">
-		      <h3><span>Project 03</span> NJS Equine Therapy</h3>
-		      <p>A start-up branding and web project. The brief was to create a professional, simple brand for a specialist in Equine Therapy, based in Yorkshire, England.</p>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/2013/10/25/project-06-njs/" target="_blank">View project</a>
-		      <a class="btn btn-primary" href="http://www.njsequinetherapy.com/" target="_blank">Visit website</a>
-		      <ul class="project meta">
-		      	<li>Tags:</li>
-		      	<li>Logo design</li>
-		      	<li>Brand guidelines</li>
-		      	<li>Brand collateral</li>
- 		      	<li>Web design</li>
-		      	<li>Front-end development</li>
-		      </ul>
-		    </div>
+			<div class="row">
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsten-scribble_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-hb-logo_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karstenworksample-symbol_2x.png" >
+	      </div>
       </div>
 
-      <div id="project-04" class="jumbotron">
-				<img class="img feature" title="Recent design work." src="img/feature/img-feature-hb.png" >
-				<div class="content-container">
-		      <h3><span>Project 04</span> Harrogate Health & Beauty</h3>
-		      <p>Creating and developing a brand identity for a premium cosmetic clinic, based in Yorkshire, England.</p>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/2013/08/project-05-harrogate-health-beauty/" target="_blank">View project</a>
-		      <a class="btn btn-primary secondary flag" href="http://www.harrogatehealthandbeauty.com" target="_blank">Visit website</a>
-		      <ul class="project meta">
-		      	<li>Tags:</li>
-		      	<li>Logo design</li>
-		      	<li>Brand guidelines</li>
-		      	<li>Brand collateral</li>
- 		      	<li>Web design</li>
-		      	<li>Front-end development</li>
-		      </ul>
-		    </div>
+			<div class="row">
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karstenworksample-icon_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsten-me-workmark_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsteninc-symbol_2x.png" >
+	      </div>
       </div>
 
-      <div id="project-05" class="jumbotron">
-				<img class="img feature" title="Recent design work." src="img/feature/img-feature-framework.png" >
-				<div class="content-container">
-		      <h3><span>Project 05</span> A one-page web project framework</h3>
-		      <p>A simple aim; create a one page web project template – an easily customisable, flexible platform to showcase your latest work.</p>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/2013/12/resource-04/" target="_blank">View project</a>
-		      <a class="btn btn-primary" href="http://karstenrowe.com/projects/one-page-framework/" target="_blank">Visit website</a>
-		      <ul class="project meta">
-		      	<li>Tags:</li>
-		      	<li>Logo design</li>
- 		      	<li>Web design</li>
-		      	<li>Front-end development</li>
-		      </ul>
-		    </div>
+			<div class="row">
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-karsten-onepage-symbol_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-koffee-wordmark_2x.png" >
+	      </div>
+	      <div class="col-xs-12 col-sm-4">
+					<img class="img artwork" title="Recent design work." src="img/artwork/artwork-kar-logo_2x.png" >
+	      </div>
       </div>
 
       <div class="row cta">
 	      <h3>Thank you for taking the time to view my work – have a great day.</h3>
-	      <a class="btn btn-lg btn-primary" title="Send Karsten Rowe an email." href="mailto:karstenrowe@googlemail.com?Subject=Enquiry" target="_top">Send me mail</a>
+	      <a class="btn btn-lg btn-primary" title="Send Karsten Rowe an email." href="mailto:hello@karstenrowe.com?Subject=Enquiry" target="_top">Send me mail</a>
 	      <a class="btn btn-lg btn-primary" href="#myModal" role="button" data-toggle="modal">Download CV <span>.pdf + .doc</span></a>
 				<!-- Modal -->
 				<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -228,16 +138,11 @@
 			      <a class="btn btn-lg btn-primary" href="http://karstenrowe.com/projects/worksample/download/karstenrowe-cv-2013.pdf.zip">.pdf</a>
 			      <a class="btn btn-lg btn-primary" href="http://karstenrowe.com/projects/worksample/download/karstenrowe-cv-2013.docx.zip">.doc</a>
 				  </div>
-<!--
-				  <div class="modal-footer">
-				    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-				  </div>
--->
 				</div>
       </div>
 
       <div class="row testimonial">
-        <blockquote>"After the interview with Karsten, I felt mentally buoyed; even then I recognised a rare talent – someone who was incredibly talented and creative himself, but also interested in the values and talents of others." <cite>Chris Mounsey, UX Director at VerseOne Technologies</cite><a href="http://www.linkedin.com/in/karstenrowe" target="_blank">View more recommendations on LinkedIn</a></blockquote>
+        <blockquote>"Karsten proved himself a very capable designer at Nutshell. His designs for our website, web application, iPhone app, iPad app, and branding are very exciting and are just what we were hoping for when we hired him. I would not hesitate to recommend Karsten to anyone looking for a first-class designer." <cite>Chris Dzombak, Software Engineer at The New York Times</cite><a href="http://www.linkedin.com/in/karstenrowe" target="_blank">View more recommendations on LinkedIn</a></blockquote>
       </div>
 
       <div class="footer">
@@ -254,17 +159,31 @@
 
     </div> <!--/.container -->
 
+    <!-- js -->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
-		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
-		<script src="js/cbpAnimatedHeader.min.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+			body = document.body;
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
 
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
 
   </body>
 </html>
