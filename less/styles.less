@@ -4,9 +4,6 @@
 // import bootstrap
 @import "bootstrap.less";
 
-// import underbar menu default styles
-@import "default-underbar.less";
-
 
 /* ============================ */
 /* = font = */
@@ -24,9 +21,9 @@
 /* ============================ */
 /* = color = */
 /* ============================ */
-@brand-dk: #084997; // blue
-@brand: #75b1fa; // base brand color
-@brand-lt: #e1eefe;
+@brand-dk: #a83430; // rose
+@brand: #d74641; // base brand color
+@brand-lt: #fa4a62;
 @brand-bg: lighten(@brand-lt, 33%);
 
 @green-dk: #26ae87;
@@ -37,9 +34,9 @@
 @blue: #4786f1;
 @blue-lt: #d3e3ff;
 
-@grey-dk: #473b30;
-@grey: #6e655e;
-@grey-lt: #ab621a;
+@grey-dk: #403d38;
+@grey: #5d5a56;
+@grey-lt: #ccc9c6;
 
 @off-white: #f1f3f6; // base color
 @warm-white: #ebe7e4;
@@ -100,7 +97,10 @@ body {
 	line-height: 21px;
 	color: @grey;
 	background-color: lighten(@warm-white, 7%);
-	.2x('../img/bg/bg-logo-wall-footer.jpg', "no-repeat", 601px, 178px);
+  min-height: 740px; // forces scroll so fixed navigation is noticeable on shorter pages
+
+  padding-top: 80px;
+	.2x('http://karstenrowe.files.wordpress.com/2013/11/footer-bg.jpg', "no-repeat", 1000px, 200px); // asset hosted on WordPress
 	background-position: 50% 100%;
 }
 /* ============================ */
@@ -141,32 +141,37 @@ body {
 			color: @brand-dk;
 		}
 		&:active {
-			color: @brand;
-			background: @brand-lt;
+			text-decoration: underline;
+			color: @brand-lt;
+			background: @green-lt;
 		}
 	}
 	// buttons
 	.btn-primary {
-		text-shadow: 0 1px 1px rgba(255,255,255, 0.2);
-	  color: @brand-dk;
-	  background-color: lighten(@brand, 10%);
+		text-shadow: 0 1px 1px rgba(0,0,0, 0.15);
+	  color: #fff;
+	  background-color: @brand;
 	  box-shadow: inset 0 1px 1px rgba(255,255,255, 0.35), 0 1px 1px rgba(0,0,0, 0.2);
 	  border-color: @brand-dk;
 	  margin: 8px 6px 8px 0;
 		&:hover {
-		  color: @grey-dk;
-		  background-color: @brand;
+			text-shadow: 0 -1px 1px rgba(0,0,0, 0.3);
+			color: @off-white;
 		  box-shadow: inset 0 0px 0px 1px rgba(255,255,255, 0.15), 0 1px 1px rgba(0,0,0, 0.3);
-		  border-color: @brand-dk;
+		  background-color: darken(@brand,10%);
+		  border-color: darken(@brand-dk, 20%);
 		}
 		&:active {
-			color: @grey-dk;
+			text-shadow: 0 -1px 1px rgba(0,0,0, 0.3);
 			background-color: @brand;
+		  box-shadow: inset 0 1px 3px rgba(0,0,0, 0.2), 0 1px 1px rgba(255,255,255, 0.5);
 			box-shadow: none;
-		  border-color: @brand;
+		  border-color: @brand-dk;
 		}
 		span {
 			font-size: 13px;
+			text-shadow: 0 1px 1px rgba(255,255,255, 0.2);
+			color: darken(@brand-dk, 20%);
 			margin-left: 3px;
 		}
 		&.secondary {
@@ -179,7 +184,6 @@ body {
 		}
 	}
 	// remove webkit blue glow on focus
-	a:focus,
 	button,
 	input:focus,
 	textarea:focus {
@@ -191,50 +195,117 @@ body {
 /* ============================ */
 /* = navigation = */
 /* ============================ */
-// body
-.cbp-spmenu-push-toright {
-	position: relative; // allow .js to add left value to reveal underbar
-}
-// underbar toggle button
-.navbar-default {
-	position: relative;
-	background: none;
-	border: none;
-}
-#showLeftPush {
-	position: absolute;
-	margin: 6px 12px;
-}
-.navbar-toggle {
-	display: block; // always show hamburger icon menu
-	background: @white;
-}
-// underbar
-.cbp-spmenu {
-	background: darken(@grey-dk, 10%);
-	box-shadow: inset -1px 0 5px rgba(0,0,0, 0.3), 2px 0 2px rgba(255,255,255, 0.6);
-	border-right: 1px solid #000;
-	overflow: hidden;
-}
-.cbp-spmenu-vertical {
-
+.navbar {
+	background-image: none !important; // removes theme gradient
+	background: @off-white;
+	background: rgba(255,255,255, 0.95);
+	border-color: @grey-lt;
+	margin: 0;
+	padding: 0;
+	.navbar-header {
+		float: none;
+	}
+	.navbar-header {
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 80px; // vertically centers text to container
+		height: 80px;
+		z-index: 1;
+		//overflow: hidden;
+		padding: 0;
+		transition: all 0.4s; // add smooth transition
+		&.cbp-af-header-shrink {
+			font-size: 11px;
+			line-height: 51px; // vertically centers text to container
+			height: 40px;
+			.navbar-brand {
+				background-size: 25%;
+				a {
+					padding: 0 0 0 46px;
+				}
+			}
+		}
+	}
+	.navbar-header-inner {
+		.clearfix;
+	}
+	nav {
+		&.left {
+			float: left;
+			padding: 0 0 0 20px;
+		}
+		&.right {
+			float: right;
+			padding: 0 20px 0 0;
+		}
+	}
+	// ul
+	ul {
+		// shared
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			//float: left;
+			margin: 0 8px;
+		}
+	}
 	a {
-		color: @off-white;
-		box-shadow: 0 1px 1px rgba(255,255,255, 0.03);
-		border-bottom: 1px solid darken(@grey-dk, 20%);
 		&:hover {
-			color: @white;
 			text-decoration: none;
-			background: @grey-dk;
+		}
+	}
+	// more link
+	.dropdown-toggle {
+
+	}
+	.dropdown-menu {
+		line-height: 20px;
+		right: 0;
+		left: auto;
+		top: 60px;
+		li {
+			display: block;
+			margin: 0;
+			padding: 0;
+			a {
+				font-size: @small;
+				text-shadow: none;
+				padding: 8px 10px;
+			}
+		}
+	}
+	// logo
+	.navbar-brand {
+		//text-indent: -9999px; // shunt actual text off the page, replace with logo-nav.pngx
+		.2x('../img/brand/logo-nav.png', "no-repeat", 45px, 33px);
+		background-position: 0 45%;
+		float: none;
+		display: inline-block;
+		a {
+			color: @grey;
+			padding: 0 0 0 60px;
+			&:hover {
+				text-decoration: none;
+			}
+			&:active {
+				background: none;
+				opacity: 0.5;
+			}
+		}
+		&:hover {
+			opacity: 0.9;
 		}
 	}
 }
-
-// twitter follow button
-.twitter-follow-button {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+// mobile nav
+.navbar-toggle {
+	top: 10px;
+	right: 24px;
+	margin: 0;
 }
 /* ============================ */
 
@@ -243,11 +314,45 @@ body {
 /* = page header = */
 /* ============================ */
 .page-header {
+	border-top: 1px dotted @warm-white;
 	border-bottom: 1px dotted @warm-white;
 	margin: 0 0 30px 0;
-	padding: 0 0 20px;
-	.img {
-		max-width: 400px;
+	padding: 30px 0 20px;
+}
+/* ============================ */
+
+
+/* ============================ */
+/* = jumbotron = */
+/* ============================ */
+.container .jumbotron {
+	text-align: left;
+	border-bottom: 1px dotted @warm-white;
+	.clearfix;
+	margin: 0 0 40px 0;
+	padding: 0 0 40px 0;
+	div {
+		.clearfix;
+	}
+	img {
+		float: left;
+		width: 49%;
+		max-width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	&:nth-child(odd) img {
+		float: right;
+	}
+	.content-container {
+		float: left;
+		width: 46%;
+		padding: 30px 20px 30px 50px;
+	}
+	h3 {
+		background: none !important;
+		margin: 0 0 10px 0 !important;
+		padding: 0 !important;
 	}
 }
 /* ============================ */
@@ -286,26 +391,47 @@ body {
 	}
 	h3 {
 		font-size: 24px;
+		color: @brand-dk;
+		span {
+			font-size: @normal;
+			text-transform: uppercase;
+			color: @grey-lt;
+			margin: 0 6px 0 0;
+		}
+	}
+	p {
 	}
 	img {
 		display: block;
-		width: 100%;
+		width: 280px;
 		max-width: 100%;
 		height: auto;
 		margin: 0 auto;
-		&.artwork {
-			border-radius: 3px;
-			width: auto;
-			//max-width: 400px;
-			margin: 0 auto;
-		}
+		padding: 1px;
 	}
 	.row {
 		text-align: center;
 		margin: 0;
 
+		&.skills {
+			border-bottom: 1px dotted @warm-white;
+			margin: 0 0 60px 0;
+			padding: 0 0 30px 0;
+			h3 {
+				display: inline-block;
+				.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline.png', "no-repeat", 147px, 57px);
+				background-position: -20px 0px;
+				margin: 0 0 10px 0;
+				padding: 12px 30px;
+				&.build {
+					.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-rose.png', "no-repeat", 147px, 57px);
+				}
+				&.deliver {
+					.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-grey.png', "no-repeat", 147px, 57px);
+				}
+			}
+		}
 		&.testimonial {
-
 			blockquote {
 				font-style: italic;
 				text-align: center;
@@ -318,14 +444,82 @@ body {
 			}
 			cite {
 				font-size: @small;
-				color: @grey-lt;
+				color: @brand-dk;
 			}
 			a {
 				font-size: @tiny;
 				font-style: normal;
+				color: @grey-lt;
 				position: absolute;
 				right: 5px;
 				bottom: 5px;
+			}
+		}
+		&.carousel {
+			margin: 0;
+			img {
+				width: auto;
+				max-height: 450px;
+				display: block;
+				margin: 0 auto;
+		transition: all 0.4s; // add smooth transition
+
+			}
+			a {
+				&:hover img {
+					opacity: 0.85;
+				}
+			}
+			.carousel-indicators {
+				li {
+					background: none;
+					border: 1px solid @brand-lt;
+					&.active {
+						background: @brand-lt;
+					}
+				}
+			}
+			// a
+			.carousel-control {
+				font-size: 80px;
+				line-height: 60px;
+				text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+				color: @brand-lt;
+				top: 40%;
+				width: 8%;
+				height: 80px;
+				opacity: 1;
+				&:hover {
+					color: @brand-dk;
+					background: lighten(@brand-lt, 32%);
+					opacity: 0.8;
+				}
+				&:active {
+					color: @brand-lt;
+					background: none;
+				}
+				&.left {
+					margin-left: -12px;
+				}
+				&.right {
+					margin-right: -12px;
+				}
+			}
+		}
+	}
+	// meta ul
+	.meta {
+		font-size: small;
+		list-style: none;
+		color: @grey-lt;
+		margin: 0;
+		padding: 0;
+		.clearfix;
+		li {
+			float: left;
+			margin: 0 7px 0 0;
+			&:first-child {
+				color: @grey;
 			}
 		}
 	}
@@ -347,7 +541,7 @@ body {
 }
 // modal
 .modal {
-	background: @off-white;
+	background: @grey-dk;
 	padding-top: 40px;
 	margin: 0;
 }
@@ -387,11 +581,27 @@ body {
 /* = media queries: small screen = */
 /* ============================ */
 @media (max-width: 1000px) {
-
+	.container {
+		.jumbotron {
+			&:nth-child(odd) img {
+				float: none;
+			}
+			// img
+			.feature {
+				float: none;
+				width: 100%;
+				max-width: 60%;
+				margin: 0 auto;
+			}
+			.content-container {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
 }
 @media (max-width: 800px) {
 	.navbar {
-/*
 		.navbar-header {
 			line-height: 55px;
 			height: 40px;
@@ -413,14 +623,47 @@ body {
 				margin: 0 10px;
 			}
 		}
-*/
 	}
 	.container {
-/*
+		.page-header {
+			padding: 30px 20px 20px;
+		}
+		.carousel {
+			display: none;
+		}
+		.jumbotron {
+			margin: 0 0 10px 0;
+			padding: 0 0 10px 0;
+			&:nth-child(odd) img {
+				float: none;
+			}
+			// img
+			.feature {
+				display: none;
+			}
+			.content-container {
+				padding: 20px;
+				h3 span { display: block; }
+			}
+		}
 		.row {
 			padding: 0 20px;
+			&.skills {
+				margin: 0 0 20px 0;
+				img {
+					width: 240px;
+				}
+			}
+			&.cta {
+				h3 {
+					font-size: @big;
+					line-height: 23px;
+				}
+			}
+			&.testimonial {
+				a { left: 0; }
+			}
 		}
-*/
 		.footer {
 			.left,
 			.right {

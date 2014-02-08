@@ -1,8 +1,8 @@
-# A logo design and branding specific worksample
+# A one page worksample
 
-www.karstenrowe.com/projects/logo-wall/
+www.karstenrowe.com/projects/worksample/
 
-A simple aim; create a basic, platform to showcase my branding work.
+A simple aim; create a basic, platform to showcase my design work.
 
 * [Bootstrapped](http://getbootstrap.com/)
 * [LESS](http://lesscss.org/) integrated stylesheets – commented, variables, mixins, retina ready, minified.
